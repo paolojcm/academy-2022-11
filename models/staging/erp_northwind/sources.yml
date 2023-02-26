@@ -19,3 +19,5 @@ sources:
       - name: categories
 
       - name: suppliers
+
+      - name: shippers
