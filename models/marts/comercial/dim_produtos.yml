@@ -1,0 +1,77 @@
+version 2
+
+models:
+  - name: dim_produtos
+    description: Dimensao com informacao de produtos com categorias e fornecedores
+    columns:
+      - name: sk_produto
+        description: E a primary key da dimensao de produtos.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_produto
+        description: Não documentdo ind - fazer
+        
+      - name: id_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: id_ctegori
+        description: Não documentdo ind - fazer
+        
+      - name: nome_product
+        description: Não documentdo ind - fazer
+        
+      - name: quntidde_por_unidde     
+        description: Não documentdo ind - fazer
+        
+      - name: preco_por_unidde
+        description: Não documentdo ind - fazer
+        
+      - name: uniddes_no_estoque
+        description: Não documentdo ind - fazer
+        
+      - name: uniddes_por_ordem           
+        description: Não documentdo ind - fazer
+        
+      - name: level_de_pedido
+        description: Não documentdo ind - fazer
+        
+      - name: is_discontinudo
+        description: Não documentdo ind - fazer
+        
+      - name: nome_ctegori
+        description: Não documentdo ind - fazer
+        
+      - name: descrico_ctegori
+        description: Não documentdo ind - fazer
+        
+      - name: nome_do_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: contto_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: titulo_de_cortesi_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: endereco_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: cep_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: cidde_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: regio_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: pis_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: telefone_fornecedor
+        description: Não documentdo ind - fazer
+        
+      - name: fx_fornecedor         
+        description: Não documentdo ind - fazer
