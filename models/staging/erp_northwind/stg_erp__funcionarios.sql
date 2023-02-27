@@ -2,6 +2,7 @@ with
     source_employees as (
         select 
         cast(employee_id as int) as id_funcionario				
+        , cast(reports_to as int) as id_gerente	
         , cast(last_name as string) as sobrenome_do_funcionario	
         , cast(first_name as string) as nome_do_funcionario				
         , cast((first_name || ' ' || last_name) as string) as nome_completo_funcionario		
