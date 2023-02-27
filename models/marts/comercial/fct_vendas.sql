@@ -59,8 +59,10 @@ with
     )
 
     , transformacoes as (
-        select            
-            *
+        select
+            --id_pedido || '-' || fk_produto as sk_venda   
+            {{ dbt_utils.surrogate_key(['id_pedido', 'fk_produto'])}} as sk_venda
+            , *
             , case
                 when desconto > 0 then true
                 else false
