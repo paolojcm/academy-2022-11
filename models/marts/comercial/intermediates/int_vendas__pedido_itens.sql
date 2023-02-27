@@ -1,20 +1,20 @@
 with
     pedidos as (
         select
-            pedidos.id_pedido
-            , pedidos.id_funcionario
-            , pedidos.id_cliente
-            , pedidos.id_transportadora
-            , pedidos.data_do_pedido
-            , pedidos.frete
-            , pedidos.destinatario
-            , pedidos.endereco_destinatario
-            , pedidos.cep_destinatario
-            , pedidos.cidade_destinatario
-            , pedidos.regiao_destinatario
-            , pedidos.pais_destinatario
-            , pedidos.data_do_envio
-            , pedidos.data_requerida                    
+            id_pedido
+            , id_funcionario
+            , id_cliente
+            , id_transportadora
+            , data_do_pedido
+            , frete
+            , destinatario
+            , endereco_destinatario
+            , cep_destinatario
+            , cidade_destinatario
+            , regiao_destinatario
+            , pais_destinatario
+            , data_do_envio
+            , data_requerida                    
         from {{ ref('stg_erp__ordens')}}
     )
 
