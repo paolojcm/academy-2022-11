@@ -27,10 +27,10 @@ with
     , joined as (
         select
             pedido_item.id_pedido
-            , pedido_item.id_funcionario
-            , pedido_item.id_cliente
-            , pedido_item.id_transportadora            
-            , pedido_item.id_produto           
+            , funcionarios.sk_funcionario as fk_funcionario
+            , clientes.sk_cliente as fk_cliente
+            , transportadoras.sk_transportadora as fk_transportadora
+            , produtos.sk_produto as fk_produto           
             , pedido_item.desconto
             , pedido_item.preco_da_unidade
             , pedido_item.quantidade             
@@ -58,6 +58,18 @@ with
         left join transportadoras on pedido_item.id_transportadora = transportadoras.id_transportadora
     )
 
+    , transformacoes as (
+        select            
+            *
+            , case
+                when desconto > 0 then true
+                else false
+                end as is_teve_desconto
+            , preco_da_unidade * quantidade as total_bruto
+            , (1 - desconto) * preco_da_unidade * quantidade as total_liquido
+        from joined
+    )
+
     select *
-    from joined
+    from transformacoes
     
