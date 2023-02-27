@@ -18,3 +18,7 @@ with
         select *            
         from {{ ref('dim_transportadoras')}}
     )
+
+    select *
+    from transportadoras
+    
