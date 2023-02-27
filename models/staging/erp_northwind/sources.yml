@@ -23,3 +23,7 @@ sources:
       - name: shippers
 
       - name: customers
+
+      - name: order_details
+
+      - name: employees
