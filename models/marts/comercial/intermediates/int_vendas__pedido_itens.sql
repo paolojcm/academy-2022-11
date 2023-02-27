@@ -47,8 +47,7 @@ with
             , pedidos.cep_destinatario
             , pedidos.cidade_destinatario
             , pedidos.regiao_destinatario
-            , pedidos.pais_destinatario
-         
+            , pedidos.pais_destinatario         
         from pedidos
         left join pedido_itens on pedidos.id_pedido = pedido_itens.id_pedido
     )
