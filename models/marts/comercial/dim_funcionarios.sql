@@ -16,12 +16,12 @@ with
             , funcionarios.cargo							
             , funcionarios.data_da_contratacao		
             , gerentes.nome_completo_funcionario as gerente		
-            , funcionarios.as endereco				
-        	, funcionarios.as cep					
-            , funcionarios.as cidade				            
-            , funcionarios.as regiao            
-            , funcionarios.as pais					
-            , funcionarios.as telefone				
+            , funcionarios.endereco				
+        	, funcionarios.cep					
+            , funcionarios.cidade				            
+            , funcionarios.regiao            
+            , funcionarios.pais					
+            , funcionarios.telefone				
             , funcionarios.observacoes as observacoes         
         from funcionarios
         left join funcionarios as gerentes on 
