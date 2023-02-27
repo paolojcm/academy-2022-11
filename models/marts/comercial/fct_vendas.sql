@@ -44,6 +44,13 @@ with
             , pedido_item.cidade_destinatario
             , pedido_item.regiao_destinatario
             , pedido_item.pais_destinatario 
+            , clientes.nome_do_cliente
+            , funcionarios.nome_completo_funcionario
+            , funcionarios.id_gerente
+            , transportadoras.nome_transportadora
+            , produtos.nome_produto
+            , produtos.nome_categoria
+            , produtos.is_discontinuado
         from pedido_item
         left join clientes on pedido_item.id_cliente = clientes.id_cliente
         left join funcionarios on pedido_item.id_funcionario = funcionarios.id_funcionario
